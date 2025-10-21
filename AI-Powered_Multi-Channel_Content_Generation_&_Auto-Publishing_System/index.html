@@ -7,120 +7,86 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
-    body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: "Inter", sans-serif;
+     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    header {
-      background-color: #161b22;
-      padding: 16px 0;
-      text-align: center;
-      border-bottom: 1px solid #30363d;
-    }
-
-    header h1 {
-      color: #58a6ff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    .btn-back {
-      background-color: #21262d;
-      color: #c9d1d9;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 8px 16px;
-      text-decoration: none;
-      transition: all 0.2s ease-in-out;
-      position: absolute;
-      left: 20px;
-      top: 16px;
-    }
-
-    .btn-back:hover {
-      background-color: #30363d;
-      color: #fff;
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
     }
 
     .container {
-      max-width: 900px;
-      margin: 60px auto;
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      color: #58a6ff;
-      margin-top: 1.8rem;
-      display: flex;
-      align-items: center;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
     }
 
-    h2 .icon {
-      margin-right: 10px;
+    p {
+      margin-bottom: 1rem;
+      color: #444;
     }
 
-    strong {
-      color: #fff;
+    ul {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
     }
 
-    ul, ol {
-      color: #c9d1d9;
+    li {
+      margin-bottom: 0.3rem;
+      color: #444;
     }
 
-    .badge-skill {
-      background-color: #1f6feb33;
-      color: #58a6ff;
-      border-radius: 6px;
-      padding: 6px 12px;
-      font-size: 0.9rem;
-      margin: 4px;
+    .upwork-link {
       display: inline-block;
-      border: 1px solid #1f6feb55;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #8b949e;
-      font-size: 0.9rem;
-      padding-bottom: 20px;
-    }
-
-    a {
-      color: #58a6ff;
+      background-color: #14a800;
+      color: white;
+      padding: 0.8rem 1.5rem;
       text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .upwork-link:hover {
+      background-color: #108a00;
+      transform: translateY(-1px);
+    }
+
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: #f0f8ff;
+      border-radius: 12px;
+      border: 2px solid #14a800;
     }
 
     @media (max-width: 768px) {
-      .btn-back {
-        position: static;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-
-      header h1 {
-        font-size: 1.4rem;
-      }
-
-      .container {
-        margin: 30px 15px;
-        padding: 25px;
-      }
+      .container { padding: 1rem 0.75rem; max-width: 100%; }
+      h1 { font-size: 1.6rem; line-height: 1.3; }
+      h2 { font-size: 1.2rem; }
+      p, li { font-size: 0.95rem; }
     }
   </style>
 </head>
