@@ -128,104 +128,73 @@
       </p>
       <p>
         Using <strong>Make.com</strong>, I built an automated workflow that activates right after the client finishes a <strong>Zoom call</strong>.<br>
-        The system automatically retrieves the recording, extracts the <strong>audio file</strong>, and sends it to <strong>OpenAI</strong> for transcription.
+        The system automatically retrieves the recording, extracts the <strong>audio file</strong>, and sends it to <strong>OpenAI</strong> for transcription.<br>
+        Once the transcript is ready, OpenAI analyzes the conversation to identify <strong>key discussion points</strong> and <strong>next steps</strong> for both the broker and the client.
       </p>
-
-      <h2><i class="bi bi-diagram-3 icon"></i> ⚙️ How It Works</h2>
-      <ol>
-        <li><strong>Input Form Submission:</strong> User submits a YouTube video link and title via an Airtable form.</li>
-        <li><strong>Trigger in Make.com:</strong> Submission activates an automated Make.com scenario.</li>
-        <li><strong>Video Transcription:</strong> DumplingAI transcribes the video into text.</li>
-        <li><strong>AI Content Creation:</strong> OpenAI generates unique text content for each social platform.</li>
-        <li><strong>Image Generation:</strong> Replicate creates a matching visual image for the post.</li>
-        <li><strong>Review & Approval:</strong> Generated content is reviewed before publishing.</li>
-        <li><strong>Auto-Publishing:</strong> Upon approval, the system posts automatically to all selected channels.</li>
-      </ol>
+      <p>
+        Based on these insights, OpenAI generates a <strong>draft follow-up email</strong>, summarizing the meeting results and suggested actions.<br>
+        All extracted data — meeting notes, highlights, and email drafts — are automatically saved to <strong>Airtable CRM</strong>.
+      </p>
+      <p>
+        To improve flexibility, a <strong>review and rewrite system</strong> was implemented in Airtable:<br>
+        if the broker wants to adjust the follow-up email, they can provide feedback directly in Airtable, and the AI will <strong>regenerate the message</strong> accordingly.
+      </p>
 
       <h2><i class="bi bi-tools icon"></i> 🧩 Tools Used</h2>
       <ul>
-        <li><strong>Airtable</strong> – database and form input</li>
-        <li><strong>Make.com</strong> – automation and integrations</li>
-        <li><strong>DumplingAI</strong> – YouTube transcription</li>
-        <li><strong>OpenAI API</strong> – AI-driven content generation</li>
-        <li><strong>Replicate</strong> – AI image generation</li>
+        <li><strong>Make.com</strong> – Workflow automation</li>
+        <li><strong>OpenAI API</strong> – Transcription, text analysis, and email generation</li>
+        <li><strong>Zoom</strong> – Source of recorded meetings</li>
+        <li><strong>Airtable</strong> – CRM and feedback management</li>
       </ul>
 
-      <h2><i class="bi bi-lightbulb icon"></i> 🚀 Benefits Delivered</h2>
+      <h2><i class="bi bi-lightbulb icon"></i> 🚀 Benefit Delivered</h2>
+      <p>
+        This system:
+      </p>
       <ul>
-        <li>End-to-end automation from video input to publication</li>
-        <li>Significant time savings and consistent quality output</li>
-        <li>Cross-platform content generation with unified workflow</li>
-        <li>Manual review step ensures quality control</li>
+        <li>Eliminated hours of manual note-taking and email drafting</li>
+        <li>Ensured consistent, professional client communication</li>
+        <li>Created a scalable, AI-driven workflow that integrates directly with the CRM</li>
+        <li>Allowed on-demand rewriting for customized client follow-ups</li>
       </ul>
 
       <h2><i class="bi bi-gear-fill icon"></i> 🛠️ Skills & Deliverables</h2>
       <div>
         <ul>
-        <li> <span class="badge-skill">Make.com Automation</span></li>
-        <li><span class="badge-skill">API Integration</span</li>
-        <li><span class="badge-skill">AI Workflow Design</span></li>
-        <li><span class="badge-skill">OpenAI API</span></li>
-        <li><span class="badge-skill">Airtable Database</span></li>
-        <li><span class="badge-skill">End-to-End Automation</span></li>  
+        <li> <span class="badge-skill">Make.com</span></li>
+        <li><span class="badge-skill">OpenAI API</span</li>
+        <li><span class="badge-skill">Airtable</span></li>
+        <li><span class="badge-skill">Workflow Automation</span></li>
+        <li><span class="badge-skill">API Integration</span></li> 
         </ul>
       </div>
       <div>
         <h2>Screenshots</h2>
         <ul>
           <li>
-            <p><strong>Make - Video Transcription</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Video%20transcription%20-%20demo.jpg" alt="Video Transcription" class="project-image">
+            <p><strong>Make - Automation</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/Make_scenario.jpg" alt="Make - Automation" class="project-image">
             </p>
           </li>
           <li>
-            <p><strong>Make - Creating content units for each channel</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Content%20items%20creation%20-%20demo.jpg" alt="Creating content units for each channel" class="project-image">
+            <p><strong>Airtable Automation That Sends AI-Generated Email for Review</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/Email_is_ready_to_send.jpg" alt="Airtable Automation That Sends AI-Generated Email for Review" class="project-image">
             </p>
           </li>
           <li>
-            <p><strong>Make - Content generation</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Content%20creation%20-%20demo.jpg" alt="Content generation" class="project-image">
+            <p><strong>Airtable Automation That Sends Reviewed Email to Client</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/Send_Follow_up_Email.jpg" alt="Airtable Automation That Sends Reviewed Email to Client" class="project-image">
             </p>
           </li>
           <li>
-            <p><strong>Make - Publishing content on social networks</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Publication%20Demo.jpg" alt="Publishing content on social networks" class="project-image">
+            <p><strong>Airtable - Key moments of the call</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/Airtable_Key_moments_of_the_call.jpg" alt="Airtable - Key moments of the call" class="project-image">
             </p>
           </li>
           <li>
-            <p><strong>Airtable - Creation</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20creation.jpg" alt="Airtable - Creation" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Creation Modaration</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Creation%20Modaration.jpg" alt="Airtable - Creation Modaration" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Creation Kanban</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Kanban.jpg" alt="Airtable - Creation Kanban" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Channels</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Channels.jpg" alt="Airtable - Channels" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Content Ideas</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Content%20Ideas.jpg" alt="Airtable - Content Ideas" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Interfacess</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Interfaces.jpg" alt="Airtable - Interfaces" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Form</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/form.jpg" alt="Airtable - Form" class="project-image">
+            <p><strong>Airtable - Draft follow-up letter</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/Airtable_Draft_follow-up_letter.jpg" alt="Airtable - Draft follow-up letter" class="project-image">
             </p>
           </li>
         </ul>
