@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automating Contact Updates in Google Sheets with Make</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    ul {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    ol {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+      color: #444;
+    }
+    .upwork-link {
+      display: inline-block;
+      background-color: #14a800;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+    }
+    .upwork-link:hover {
+      background-color: #108a00;
+      transform: translateY(-1px);
+    }
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: #f0f8ff;
+      border-radius: 12px;
+      border: 2px solid #14a800;
+    }
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #14a800;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Automating Contact Updates in Google Sheets with Make</h1>
+
+  <main>
+    <div class="container">
+      <p><strong><i class="bi bi-person-fill icon"></i> 👤 Role:</strong> Automation Specialist — built Make.com workflow connecting ActiveCampaign with Google Sheets</p>
+
+      <h2><i class="bi bi-info-circle icon"></i> 📌 Project Overview</h2>
+      <p>
+        This project demonstrates an automation that updates contact data in Google Sheets based on email engagement events.
+      </p>
+      <p>
+        The goal was to automatically capture and synchronize contact information when a recipient clicks a specific link in an email. The system checks whether the contact already exists in Google Sheets and updates their data, or creates a new record if the contact is not found.
+      </p>
+      <p>
+        The solution was designed to remove manual data handling and ensure accurate, up-to-date contact records connected directly to marketing activity.
+      </p>
+
+      <h2><i class="bi bi-diagram-3 icon"></i> ⚙️ Business Challenge</h2>
+      <p>
+        Manually maintaining contact data after email interactions often leads to outdated records, duplicated entries, and human errors.
+      </p>
+      <p>
+        The client needed a reliable way to:
+      </p>
+      <ul>
+        <li>Track email link clicks</li>
+        <li>Automatically reflect those interactions in Google Sheets</li>
+        <li>Keep contact records clean and consistent without manual work</li>
+      </ul>
+      <p>
+        A reliable synchronization mechanism was needed to keep both systems aligned automatically.
+      </p>
+      <h2><i class="bi bi-diagram-3 icon"></i> 🛠️ Solution Architecture</h2>
+      <p>
+        The automation was built using Make.com as the core integration platform, connecting ActiveCampaign and Google Sheets.
+        <br><br>
+        <strong>Workflow logic:</strong>
+      </p>
+      <ol>
+        <li>ActiveCampaign triggers the automation when a contact clicks a specific email link</li>
+        <li>Make.com receives the event and extracts contact data</li>
+        <li>Google Sheets is searched for an existing contact</li>
+        <li>If found — the row is updated with the latest data</strong></li>
+        <li>If not found — a new row is created automatically</li>
+      </ol>
+      <p>
+        This logic ensures that every interaction is recorded correctly, without duplicates.
+      </p>
+      
+      <h2><i class="bi bi-tools icon"></i> 🔧 Tools & Technologies Used</h2>
+      <ul>
+        <li><strong>Make.com</strong> — automation logic and data routing</li>
+        <li><strong>ActiveCampaign</strong> — email engagement trigger source</li>
+        <li><strong>Google Sheets</strong> – contact data storage</li>
+        <li><strong>Built-in Make functions</strong> — data mapping and conditional logic</li>
+      </ul>
+
+      <h2><i class="bi bi-lightbulb icon"></i> 📈 Results & Impact</h2>
+      <ul>
+        <li>Accurate and always up-to-date contact records</li>
+        <li>No manual data entry required</li>
+        <li>Reduced errors and duplicated contacts</li>
+        <li>Faster workflow between email engagement and data management</li>
+        <li>Scalable solution that can be extended with additional triggers or fields</li>
+      </ul>
+
+      <h2><i class="bi bi-gear-fill icon"></i> 🎯 Use Case</h2>
+      <p>
+        This automation is ideal for:
+      </p>
+      <ul>
+        <li>Marketing teams tracking email engagement</li>
+        <li>Lead nurturing workflows</li>
+        <li>CRM-lite setups based on Google Sheets</li>
+        <li>Businesses that want simple, reliable automation without heavy CRM systems</li>
+      </ul>
+      <div>
+        <h2>Screenshots</h2>
+        <ul>
+          <li>
+            <p><strong>Make - Automation</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Two-Way_Contact_Synchronization_Between_HubSpot_CRM_and_Google_Sheets/Make-Automation.jpg" alt="Make - Automation" class="project-image">
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
