@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI-Powered Multi-Channel Content Generation & Auto-Publishing System</title>
+  <title>Two-Way Contact Synchronization Between HubSpot CRM and Google Sheets via Make.com</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -116,124 +116,138 @@
   <div class="container">
     <a href="../index.html" class="back-link">← Back to Portfolio</a>
 
-    <h1>AI-Powered Multi-Channel Content Generation & Auto-Publishing System</h1>
+    <h1>Two-Way Contact Synchronization Between HubSpot CRM and Google Sheets via Make.com</h1>
 
   <main>
     <div class="container">
-      <p><strong><i class="bi bi-person-fill icon"></i> 👤 Role:</strong> Automation Specialist & AI Workflow Developer</p>
+      <p><strong><i class="bi bi-person-fill icon"></i> 👤 Role:</strong> Automation Engineer building two-way HubSpot and Google Sheets contact sync using Make.com</p>
 
-      <h2><i class="bi bi-info-circle icon"></i> 📝 Project Description</h2>
+      <h2><i class="bi bi-info-circle icon"></i> 📌 Project Overview</h2>
       <p>
-        This project demonstrates an <strong>AI-powered automation system</strong> designed to generate and publish content across multiple social media platforms — <strong>Telegram, Facebook, LinkedIn, and Instagram</strong>.
+        This project demonstrates a fully automated two-way contact synchronization system built with <strong>Make.com</strong>, connecting <strong>HubSpot CRM</strong> and <strong>Google Sheets</strong>.
       </p>
       <p>
-        The process starts when a user submits a <strong>YouTube video link and title</strong>. The system then automatically handles <strong>transcription, AI content generation, image creation, review, and auto-publishing</strong> — ensuring speed, consistency, and quality.
+        The system ensures that contact data stays consistent across both platforms without manual updates, even when records already exist on one or both sides.
+      </p>
+      <p>
+        The automation handles contact creation, updates, data merging, and missing field generation using clear priority rules and transformation logic.
       </p>
 
-      <h2><i class="bi bi-diagram-3 icon"></i> ⚙️ How It Works</h2>
+      <h2><i class="bi bi-diagram-3 icon"></i> ❗ Problem</h2>
+      <p>
+        The client managed contacts in both HubSpot CRM and Google Sheets, which caused several issues:
+      </p>
+      <ul>
+        <li>Duplicate or outdated contact information</li>
+        <li>Manual copying between systems</li>
+        <li>Missing names for contacts created only from email addresses</li>
+        <li>No clear rule which system should override the other</li>
+        <li>High risk of data inconsistency over time</li>
+      </ul>
+      <p>
+        A reliable synchronization mechanism was needed to keep both systems aligned automatically.
+      </p>
+      <h2><i class="bi bi-diagram-3 icon"></i> ✅ Solution</h2>
+      <p>
+        I built a Make.com scenario that synchronizes contacts both ways between HubSpot and Google Sheets.
+        <br><br>
+        Key logic implemented:
+      </p>
+      <ul>
+        <li>Search for existing contacts in both systems</li>
+        <li>Create contacts or rows only when missing</li>
+        <li>Compare fields one by one before updating</li>
+        <li>Apply <strong>Google Sheets as the priority sourcer</strong></li>
+        <li>Generate missing first and last names from email addresses</li>
+        <li>Update only empty or outdated fields</li>
+      </ul>
+      <p>
+        This approach avoids overwriting valid data and prevents sync loops.
+      </p>
+      
+      <h2><i class="bi bi-tools icon"></i> ⚙️ Automation Workflow</h2>
       <ol>
-        <li><strong>Input Form Submission:</strong> User submits a YouTube video link and title via an Airtable form.</li>
-        <li><strong>Trigger in Make.com:</strong> Submission activates an automated Make.com scenario.</li>
-        <li><strong>Video Transcription:</strong> DumplingAI transcribes the video into text.</li>
-        <li><strong>AI Content Creation:</strong> OpenAI generates unique text content for each social platform.</li>
-        <li><strong>Image Generation:</strong> Replicate creates a matching visual image for the post.</li>
-        <li><strong>Review & Approval:</strong> Generated content is reviewed before publishing.</li>
-        <li><strong>Auto-Publishing:</strong> Upon approval, the system posts automatically to all selected channels.</li>
+        <strong>Trigger</strong>
+        <ul>
+          <li>Scheduled or event-based execution</li>
+        </ul>
+        <strong>Search & Match</strong>
+        <ul>
+          <li>Find contact by email in HubSpot</li>
+          <li>Find row by email in Google Sheets</li>
+        </ul>
+        <strong>Data Comparison</strong>
+        <ul>
+          <li>Field-by-field comparison</li>
+          <li>Priority logic applied (Google Sheets → HubSpot)</li>
+        </ul>
+        <strong>Data Transformation</strong>
+        <ul>
+          <li>Split email to generate first and last name if missing</li>
+          <li>Normalize text values</li>
+        </ul>
+        <strong>Create or Update Records</strong>
+        <ul>
+          <li>Create missing contacts or rows</li>
+          <li>Update only necessary fields</li>
+        </ul>
+        <strong>Consistency Protection</strong>
+        <ul>
+          <li>No loops</li>
+          <li>No blind overwrites</li>
+        </ul>
       </ol>
-
-      <h2><i class="bi bi-tools icon"></i> 🧩 Tools Used</h2>
+      
+      <h2><i class="bi bi-tools icon"></i> 🛠️ Tools & Technologies</h2>
       <ul>
-        <li><strong>Airtable</strong> – database and form input</li>
-        <li><strong>Make.com</strong> – automation and integrations</li>
-        <li><strong>DumplingAI</strong> – YouTube transcription</li>
-        <li><strong>OpenAI API</strong> – AI-driven content generation</li>
-        <li><strong>Replicate</strong> – AI image generation</li>
+        <li><strong>Make.com</strong> — scenario logic and orchestration</li>
+        <li><strong>HubSpot CRM</strong> — contact management</li>
+        <li><strong>Google Sheets</strong> – external contact database</li>
+        <li><strong>Built-in functions</strong></li>
+        <ul>
+          <li><i><span style="background-color: #ccc;">ifempty()</span></i></li>
+          <li><i><span style="background-color: #ccc;">split()</span></i></li>
+          <li><i><span style="background-color: #ccc;">get()</span></i></li>
+        </ul>
       </ul>
 
-      <h2><i class="bi bi-lightbulb icon"></i> 🚀 Benefits Delivered</h2>
+      <h2><i class="bi bi-lightbulb icon"></i> 🎯 Result</h2>
+      <p>
+        The client received:
+      </p>
       <ul>
-        <li>End-to-end automation from video input to publication</li>
-        <li>Significant time savings and consistent quality output</li>
-        <li>Cross-platform content generation with unified workflow</li>
-        <li>Manual review step ensures quality control</li>
+        <li>A fully automated contact synchronization system</li>
+        <li>One consistent contact database across platforms</li>
+        <li>Automatic name generation for incomplete contacts</li>
+        <li>Zero manual syncing</li>
+        <li>Reduced errors and duplicated data</li>
+        <li>Significant time savings in daily operations</li>
       </ul>
 
-      <h2><i class="bi bi-gear-fill icon"></i> 🛠️ Skills & Deliverables</h2>
+      <h2><i class="bi bi-gear-fill icon"></i> 🧩 Skills & Deliverables</h2>
       <div>
         <ul>
-        <li> <span class="badge-skill">Make.com Automation</span></li>
-        <li><span class="badge-skill">API Integration</span></li>
-        <li><span class="badge-skill">AI Workflow Design</span></li>
-        <li><span class="badge-skill">OpenAI API</span></li>
-        <li><span class="badge-skill">Airtable Database</span></li>
-        <li><span class="badge-skill">End-to-End Automation</span></li>  
+        <li>Make.com automation</li>
+        <li>HubSpot CRM integration</li>
+        <li>Google Sheets automation</li>
+        <li>Two-way data synchronization</li>
+        <li>Field-level merge logic</li>
+        <li>>CRM data normalization</li>
+        <li>>API-based workflow design</li>
         </ul>
       </div>
       <div>
         <h2>Screenshots</h2>
         <ul>
           <li>
-            <p><strong>Make - Video Transcription</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Video%20transcription%20-%20demo.jpg" alt="Video Transcription" class="project-image">
+            <p><strong>Make - Automation</strong>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Video%20transcription%20-%20demo.jpg" alt="Make - Automation" class="project-image">
             </p>
           </li>
-          <li>
-            <p><strong>Make - Creating content units for each channel</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Content%20items%20creation%20-%20demo.jpg" alt="Creating content units for each channel" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Make - Content generation</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Content%20creation%20-%20demo.jpg" alt="Content generation" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Make - Publishing content on social networks</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Publication%20Demo.jpg" alt="Publishing content on social networks" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Creation</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20creation.jpg" alt="Airtable - Creation" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Creation Modaration</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Creation%20Modaration.jpg" alt="Airtable - Creation Modaration" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Creation Kanban</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Kanban.jpg" alt="Airtable - Creation Kanban" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Channels</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Channels.jpg" alt="Airtable - Channels" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Content Ideas</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Content%20Ideas.jpg" alt="Airtable - Content Ideas" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Interfacess</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/Airtable%20Interfaces.jpg" alt="Airtable - Interfaces" class="project-image">
-            </p>
-          </li>
-          <li>
-            <p><strong>Airtable - Form</strong>
-            <img src="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/form.jpg" alt="Airtable - Form" class="project-image">
-            </p>
-          </li>
+        
         </ul>
       </div>
-      
-
-      
     </div>
   </main>
-
 </body>
 </html>
