@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airtable CRM with Executive Dashboard & Team Workflows</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    ul {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    ol {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+      color: #444;
+    }
+    .upwork-link {
+      display: inline-block;
+      background-color: #14a800;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+    }
+    .upwork-link:hover {
+      background-color: #108a00;
+      transform: translateY(-1px);
+    }
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background-color: #f0f8ff;
+      border-radius: 12px;
+      border: 2px solid #14a800;
+    }
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #14a800;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Airtable CRM with Executive Dashboard & Team Workflows</h1>
+
+  <main>
+    <div class="container">
+      <p><strong><i class="bi bi-person-fill icon"></i> 👤 Role:</strong> Airtable CRM Architect & Interface Designer</p>
+
+      <h2><i class="bi bi-info-circle icon"></i> 🔍 Project Overview</h2>
+      <p>
+        This project focused on designing a custom Airtable CRM for a creative digital agency with a growing team and multiple service lines.<br>
+        The goal was to replace scattered tools and spreadsheets with a single, structured system to manage leads, clients, projects, tasks, and financial data in one workspace.
+      </p>
+      <p>
+        The CRM was designed to be lightweight, scalable, and easy to use for non-technical team members, while still giving management clear visibility into operations.
+      </p>
+    
+      <h2><i class="bi bi-diagram-3 icon"></i> 🎯 Business Challenge</h2>
+      <p>
+        The agency faced several operational challenges
+      </p>
+      <ul>
+        <li>Leads were spread across Google Sheets, Notion, and email</li>
+        <li>No unified system for tracking lead and client statuses</li>
+        <li>Duplicate client records created by different managers</li>
+        <li>No clear overview of tasks related to each client or project</li>
+        <li>Financial data was not structured for analysis</li>
+      </ul>
+      <p>
+        They needed a centralized CRM reflecting the full workflow:<br>
+        <strong>lead → client → project → tasks → status updates</strong>
+      </p>
+      <h2><i class="bi bi-diagram-3 icon"></i> 🛠️ Solution</h2>
+      <p>
+        I designed and structured a custom Airtable CRM using clean database architecture, linked records, and role-friendly Interfaces aligned with daily team workflows.
+        <br><br>
+        The solution includes:
+      </p>
+      <ul>
+        <li>Normalized tables with clear field naming</li>
+        <li>Linked relationships between Leads, Clients, Projects, Tasks, and Finance</li>
+        <li>Ready-to-use views for managers and team members</li>
+        <li>Interfaces designed for operational work and executive overview></li>
+      </ul>
+      <p>
+        All logic and structure were implemented using native Airtable features.
+      </p>
+      <h2><i class="bi bi-info-circle icon"></i> 🗂 CRM Structure</h2>
+      <p>
+        <strong>Leads Management</strong><br>
+        A dedicated Leads table tracks incoming prospects with standardized sources and statuses.<br>
+        Filtered views highlight new leads, qualified leads, and leads requiring follow-up.
+      </p>
+       <p>
+        <strong>Client & Project Management</strong><br>
+        Clients are linked to converted leads and associated projects.<br>
+        Each project includes type, budget, dates, status, and related tasks, allowing managers to assess progress and risks.
+      </p>
+      <p>
+        <strong>Task Tracking</strong><br>
+        Tasks are connected to projects and assigned to team members with priorities, due dates, and status tracking.<br>
+        Smart views help the team focus on high-priority tasks and upcoming deadlines.
+      </p>
+      <p>
+        <strong>Financial Tracking</strong><br>
+        A Finance table tracks revenue and expenses per project.<br>
+        Formulas calculate profit, enabling monthly performance review and forecasting.
+      </p>
+      <h2><i class="bi bi-tools icon"></i> ⚙️ Automation Logic</h2>
+      <p>
+       One automation was <strong>designed</strong> to handle project delays:
+      </p>
+      <ul>
+        <li>Trigger: Project status changes to <strong>“Delayed”</strong></li>
+        <li>Planned logic:
+          <ul>
+            <li>Linked tasks marked as <strong>High Priority</strong></li>
+            <li>Notification sent to assigned team members</li>
+            <li>Status change comment added to the project</li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+       This logic demonstrates how delivery risks can be surfaced early using Airtable automations.
+      </p>
+      <h2><i class="bi bi-tools icon"></i> 📊 Executive Dashboard (Airtable Interface)</h2>
+      <p>
+       A dedicated Executive Dashboard was designed using Airtable Interfaces.<br><br>
+       <strong>KPI Overview</strong>
+      </p>
+      <ul>
+        <li>Total Active Clients</li>
+        <li>Projects In Progress</li>
+        <li>High-Priority Tasks</li>
+        <li>Monthly Revenue</li>
+      </ul>
+       <p>
+       <strong>Client Overview</strong><br><br>
+       Managers can select a client and instantly view:
+      </p>
+      <ul>
+        <li>Related projects</li>
+        <li>Tasks</li>
+        <li>Budget and current status</li>
+      </ul>
+      <p>
+       <strong>Financial Overview</strong>
+      </p>
+      <ul>
+        <li>Monthly Revenue vs Expenses chart</li>
+        <li>Profit by project table</li>
+      </ul>
+       <p>
+        All dashboard elements update dynamically based on linked data.
+      </p>
+      <h2><i class="bi bi-lightbulb icon"></i> 🧪 Data Preparation & Validation</h2>
+      <p>
+        The project included preparing the CRM structure for CSV data import and normalization.
+      </p>
+      <ul>
+        <li>Field mapping and data standardization rules were defined</li>
+        <li>Relationships between records were validated using sample datasets</li>
+        <li>The structure was tested to ensure scalability and data consistency</li>
+      </ul>
+      <h2><i class="bi bi-lightbulb icon"></i> 🔐 Permissions & Access Control</h2>
+      <p>
+        Role-based access was configured through <strong>Airtable Interfaces</strong>:
+      </p>
+      <ul>
+        <li><strong>Owner</strong> – full visibility</li>
+        <li><strong>Manager</strong> – operational editing (excluding finance views)</li>
+        <li><strong>Assistant</strong> – limited access to Leads and Tasks</li>
+      </ul>
+      <p>
+        This approach ensures clarity and data safety without complex base-level RBAC.
+      </p>
+      <h2><i class="bi bi-lightbulb icon"></i> 📦 Final Setup</h2>
+      <p>
+        The final setup includes:
+      </p>
+      <ul>
+        <li>Fully configured Airtable Base</li>
+        <li>Structured Interfaces for team and management workflows</li>
+        <li>Visual schema overview ready for client delivery</li>
+      </ul>
+      <h2><i class="bi bi-gear-fill icon"></i> 🧠 Skills & Tools</h2>
+      <div>
+        <ul>
+          <li>Airtable</li>
+          <li>CRM Development</li>
+          <li>Database Design</li>
+          <li>Automated Workflow</li>
+          <li>Dashboard</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Screenshots</h2>
+        <ul>
+          <li>
+            <p><strong>Executive Dashboard</strong>
+              <p>
+                High-level CRM dashboard showing active clients, project status, task risks, and key operational metrics in one view.
+              </p>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/Executive_Dashboard.jpg" alt="Executive Dashboard" class="project-image">
+            </p>
+          </li>
+          <li>
+            <p><strong>Leads Pipeline</strong>
+              <p>
+                Visual lead pipeline with clear statuses, sources, owners, and dates for fast qualification and follow-up.
+              </p>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/Leads_Pipeline.jpg" alt="Leads Pipeline" class="project-image">
+            </p>
+          </li>
+          <li>
+            <p><strong>Lead Details</strong>
+              <p>
+                Detailed lead view with status, source, owner, notes, and full history for structured lead management.
+              </p>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/Lead_Details.jpg" alt="Lead Details" class="project-image">
+            </p>
+          </li>
+          <li>
+            <p><strong>Project Details</strong>
+              <p>
+                Project overview with client, status, budget, tasks, and linked finance records in a single workspace.
+              </p>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/Project_Details.jpg" alt="Project Details" class="project-image">
+            </p>
+          </li>
+          <li>
+            <p><strong>Tasks Workspace</strong>
+              <p>
+                Kanban-style task board grouped by status and priority to track progress, deadlines, and workload.
+              </p>
+            <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/Tasks_Workspace.jpg" alt="Tasks Workspace" class="project-image">
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
