@@ -3,359 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automation Expert & AI Expert | Make.com, Zapier, OpenAI, Airtable</title>
-    <meta name="description" content="Professional Automation Expert specializing in Make.com, Zapier, OpenAI, and Airtable. Streamline your business processes with AI-powered automation solutions.">
+
+    <title>Automation & AI Systems Specialist | Make.com, Zapier, OpenAI, Airtable</title>
+    <meta name="description" content="Automation and AI systems built with Make.com, Zapier, OpenAI, and Airtable. Workflow automation, integrations, and CRM processes.">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            line-height: 1.65;
+            color: #222;
             background-color: #ffffff;
             font-size: 16px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
 
         h1 {
             font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
+            font-weight: 650;
+            margin-bottom: 0.4rem;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #444;
+            margin-bottom: 1.6rem;
         }
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem 0;
-            color: #1a1a1a;
+            font-size: 1.35rem;
+            font-weight: 650;
+            margin: 2rem 0 0.9rem 0;
+            color: #111;
         }
 
-        p {
-            margin-bottom: 1rem;
-            color: #444;
+        p { margin-bottom: 0.9rem; color: #333; }
+
+        .intro { margin-bottom: 1.8rem; font-size: 1.02rem; }
+
+        .block {
+            background-color: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 10px;
+            margin: 1.6rem 0;
+            border: 1px solid #eef0f2;
         }
 
-        .intro {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+        ul { margin-left: 1.05rem; }
+        li { margin-bottom: 0.45rem; }
+
+        strong { font-weight: 600; }
+
+        a { color: #0b57d0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Projects (minimal) */
+        .projects-group-title {
+            font-weight: 650;
+            margin: 1.4rem 0 0.6rem;
+            color: #111;
         }
 
-        .section {
-            margin-bottom: 2.5rem;
-            background-color: #ffffe0;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            border-left: 4px solid #ffe438;
+        .project-list {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
         }
 
-        ul {
-            margin-left: 1rem;
-            margin-bottom: 1rem;
+        .project-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #f0f1f3;
         }
 
-        li {
-            margin-bottom: 0.3rem;
-            color: #444;
+        .project-item:last-child { border-bottom: none; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
         }
 
         .upwork-link {
             display: inline-block;
             background-color: #14a800;
-            color: white;
+            color: #fff;
             padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .upwork-link:hover {
-            background-color: #108a00;
-            transform: translateY(-1px);
-        }
-
-        .tech-section {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
             border-radius: 8px;
-            margin: 2rem 0;
-            border-left: 4px solid #14a800;
-        }
-
-        .what-i-build {
-            background-color: #fff8e1;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            border-left: 4px solid #ff9800;
-        }
-
-        .approach-section {
-            background-color: #e8f5e8;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            border-left: 4px solid #4caf50;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 2rem;
-            background-color: #f0f8ff;
-            border-radius: 12px;
-            border: 2px solid #14a800;
-        }
-
-        .cta-text {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-        }
-
-        .contact-text {
-            margin-bottom: 1.5rem;
-            color: #666;
+            font-weight: 600;
         }
 
         @media (max-width: 768px) {
-    .container {
-        padding: 1rem 0.75rem;
-        max-width: 100%;
-    }
-    
-    h1 {
-        font-size: 1.6rem;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
-    }
-    
-    h2 {
-        font-size: 1.2rem;
-        margin: 1.5rem 0 0.75rem 0;
-    }
-    
-    p {
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-    }
-    
-    .intro {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .tech-section, .what-i-build, .approach-section {
-        padding: 1rem 0.75rem;
-        margin: 1.5rem 0;
-    }
-    
-    .cta-section {
-        padding: 1.5rem 1rem;
-        margin: 2rem 0;
-    }
-    
-    .cta-text {
-        font-size: 1.1rem;
-    }
-    
-    ul {
-        margin-left: 0.75rem;
-        padding-left: 0;
-    }
-    
-    li {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.5;
-    }
-    
-    .upwork-link {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9rem;
-        display: block;
-        text-align: center;
-        margin: 1rem 0;
-    }
-    
-    .section {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 1rem 0.5rem;
-    }
-    
-    h1 {
-        font-size: 1.4rem;
-    }
-    
-    h2 {
-        font-size: 1.1rem;
-    }
-    
-    .tech-section, .what-i-build, .approach-section, .cta-section {
-        padding: 0.75rem 0.5rem;
-        border-radius: 6px;
-    }
-    
-    .upwork-link {
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-    }
-    
-    li {
-        font-size: 0.85rem;
-    }
-}
+            h1 { font-size: 1.55rem; }
+            h2 { font-size: 1.2rem; }
+            p  { font-size: 0.95rem; }
+            .upwork-link { display: block; text-align: center; }
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>👋 Hi there, I'm an Automation Expert & AI Expert!</h1>
-        
-        <div class="intro">
-            <p><strong>Make.com, Zapier, OpenAI, Airtable</strong></p>
-            <p>🚀 Do you want your business processes to run automatically, integrate seamlessly, and scale faster with AI? I help companies streamline workflows, connect apps, and implement intelligent automation using Make.com, Zapier, OpenAI, and Airtable — saving time, cutting costs, and unlocking new growth opportunities.</p>
-        </div>
+<div class="container">
 
-        <div class="section">
-            <h2>📝 What I Offer:</h2>
-            <ul>
-                <li><strong> Workflow Automation:</strong> Seamlessly integrate apps with Make.com (Integromat) and Zapier to automate repetitive tasks and ensure your tools work in harmony.</li>
-                <li><strong> AI-Powered Business Solutions:</strong>
-                    <ul>
-                        <li> AI Chatbots & Virtual Assistants: Custom-built intelligent agents for customer support and lead generation</li>
-                        <li> AI Content Automation: Automated content creation, transcription, and multi-channel publishing</li>
-                        <li> Document Processing: AI-powered analysis of invoices, receipts, and unstructured data</li>
-                        <li> Voice & Text AI Integration: Smart automation workflows with natural language processing</li>
-                    </ul>
-                </li>
-                <li><strong> CRM Optimization:</strong> Set up and fine-tune CRM systems like HubSpot, Pipedrive, Airtable for efficient lead tracking and sales pipeline management.</li>
-                <li><strong> Email Marketing Automation:</strong> Craft and execute powerful campaigns using tools like ActiveCampaign, Mailchimp, and Klaviyo to enhance customer journeys and drive sales.</li>
-            </ul>
-        </div>
+    <h1>Automation & AI Systems Specialist</h1>
+    <div class="subtitle"><strong>Make.com • Zapier • OpenAI • Airtable</strong></div>
 
-        <div class="tech-section">
-            <h2>🔧 Key Tools I Use:</h2>
-            <ul>
-                <li><strong> Workflow Automation:</strong> Make.com, Zapier</li>
-                <li><strong> AI Platforms:</strong> OpenAI API, ChatGPT, Claude, Voiceflow</li>
-                <li><strong> AI Chatbot Builders:</strong> ChatBase, Chipp.ai, CustomGPT, Voiceflow, Manychat</li>
-                <li><strong> CRM:</strong> HubSpot, Pipedrive, Airtable, ClickUp</li>
-                <li><strong> Marketing Automation:</strong> ActiveCampaign, Mailchimp, Klaviyo</li>
-                <li><strong> Data Management:</strong> Google Sheets, Airtable</li>
-            </ul>
-        </div>
-
-        <div class="what-i-build">
-            <h2>🛠️ What I Build:</h2>
-            <ul>
-                <li>AI-powered customer support systems (e.g., ChatGPT + Make.com + CRM)</li>
-                <li>Automated lead generation and nurturing workflows</li>
-                <li>Invoice and document processing automation (e.g., OpenAI + Airtable + Email)</li>
-                <li>Multi-channel content publishing systems (LinkedIn, Facebook, Email)</li>
-                <li>AI chatbots for websites and social media</li>
-                <li>CRM integrations and dynamic database solutions</li>
-                <li>Email marketing automation sequences</li>
-                <li>Voice-to-text and text-to-voice automation workflows</li>
-                <li>Real-time data synchronization between platforms</li>
-            </ul>
-        </div>
-
-        <div class="approach-section">
-            <h2>🚀 Why Work with Me?</h2>
-            <ul>
-                <li><strong> AI-Enhanced Solutions:</strong> I combine traditional automation with cutting-edge AI to deliver next-level efficiency.</li>
-                <li><strong> Detail-Oriented:</strong> Every automation runs flawlessly and aligns with your business goals.</li>
-                <li><strong> Innovation-Focused:</strong> I stay ahead of the curve with the latest AI technologies and automation trends.</li>
-                <li><strong> Tailored Solutions:</strong> Each project is customized to meet your unique needs.</li>
-                <li><strong> Responsive Communication:</strong> Clear and timely communication throughout the project.</li>
-            </ul>
-        </div>
-
-        <div class="cta-section">
-            <div class="cta-text">🚀 Let's Automate Your Business!</div>
-            <div class="contact-text">Whether starting fresh or optimizing existing systems, I'm here to help. Send me a message today and let's discuss your goals.</div>
-            <a href="https://www.upwork.com/freelancers/~01b354c9ce6a8c9bfe?mp_source=share" target="_blank" class="upwork-link">
-                📌 View My Upwork Profile
-            </a>
-        </div>
-
-        <h2>🏅 Certifications</h2>
-            <ul>
-                <li><a href="https://www.credly.com/badges/ff59a191-2844-44c8-9e79-ef3849d21925/public_url">Make Advance</a></li>
-                <li><a href="https://www.credly.com/badges/38911216-6ee2-468a-b8a2-aa6587f81623/public_url">Make Intermediate</a></li>
-                <li><a href="https://www.credly.com/badges/f20bdf49-badf-4167-8cba-9c4a4f6b7ea4/public_url">Make Basics</a></li>
-                <li><a href="https://www.credly.com/badges/8b2c1d4e-486b-4cf6-82e0-7de111ed46b1/public_url">Make Foundation</a></li>
-                <li><a href="http://verify.skilljar.com/c/eekaux49zhrq">Airtable Builder</a></li>
-                <li><a href="http://verify.skilljar.com/c/rff4dpmrqnqv">ClickUp Expert</a></li>
-                <li><a href="http://verify.skilljar.com/c/o8xkncn8eu5t">Zapier - Increase productivity using AI</a></li>
-                <li><a href="http://verify.skilljar.com/c/uv6hdm24i3qf">Zapier - Generate blog images using AI</a></li>
-                <li><a href="http://verify.skilljar.com/c/phbqzopdjoot">Zapier - Automate getting new leads into your pipeline</a></li>
-                <li><a href="http://verify.skilljar.com/c/wew4ea7bn3a7">Zapier - Triggering Zaps with Webhooks</a></li>
-                <li><a href="http://verify.skilljar.com/c/y9hhkpttxnbo">Zapier - Filters and Paths by Zapier</a></li>
-                <li><a href="http://verify.skilljar.com/c/rvsbf9r6oj9d">Zapier - Zapier product tour</a></li>
-                <li><a href="http://verify.skilljar.com/c/it8yaq2ht8cg">Zapier - Troubleshooting your Zaps</a></li>
-                <li><a href="http://verify.skilljar.com/c/u8k7uajz59jr">Zapier - Build workflows with Zapier Tables</a></li>
-                <li><a href="http://verify.skilljar.com/c/rm4owrjpgbbu">Zapier - Formatter by Zapier</a></li>
-                <li><a href="http://verify.skilljar.com/c/h4vi4rejxis5">Zapier - Timing your Zaps</a></li>
-                <li><a href="http://verify.skilljar.com/c/pdnax4j2q3jm">Zapier - Customize your Zap</a></li>
-                <li><a href="http://verify.skilljar.com/c/hjthzhmtwmrh">Zapier - Build your first Zap</a></li>
-                <li><a href="http://verify.skilljar.com/c/cffnv35j3xj4">Zapier - Automate your work</a></li>
-                <li><a href="https://app.hubspot.com/academy/achievements/55mvn8rf/en/1/oleh-sviatenkyi/inbound">HubSpot - Inbound</a></li>
-                <li><a href="https://app.hubspot.com/academy/achievements/lnt17zrd/en/1/oleh-sviatenkyi/inbound-sales">HubSpot - Inbound Sales</a></li>
-                <li><a href="https://drive.google.com/file/d/1-VXN6B_-ucFB_6i2og7RsbA0vC3N-Xzk/view?usp=sharing">AI-EXPERT</a></li>
-                <li><a href="https://drive.google.com/file/d/1bfzA-4X6uNh0LKkcfATRTmYT1K_p0d1M/view?usp=sharing">MARKETING AUTOMATION</a></li>
-            </ul>
-        
-
-        <h2>🚀 Projects</h2>
-            <ul>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/">Airtable CRM with Executive Dashboard & Team Workflows</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Recruiting_CRM_in_ClickUp_with_Google_Sheets_Integration/">Automated Recruiting CRM in ClickUp with Google Sheets Integration</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Telegram_Content_Automation_with_Airtable_Make_&_OpenAI/">AI-Powered Telegram Content Automation with Airtable, Make & OpenAI</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Recipe_Data_Extraction_and_Structuring_with_Make_and_OpenAI/">Automated Recipe Data Extraction and Structuring with Make and OpenAI</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/CRM_Setup_for_Apartment_Booking_Service_in_Airtable/">CRM Setup for Apartment Booking Service in Airtable</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/">AI-Powered Multi-Channel Content Generation & Auto-Publishing System</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/ManyChat_Make_OpenAI_&_Airtable_System_for_Psychology_Marathon/">ManyChat, Make, OpenAI & Airtable System for Psychology Marathon</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/">AI-Powered Meeting Notes, Follow-Up & CRM Integration</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Telegram_Chatbot_with_OpenAI_Assistant_&_Make_Integration/">Telegram Chatbot with OpenAI Assistant & Make.com Integration</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Personal_Finance_Tracking_via_Telegram_Bot_&_Make/">AI-Powered Personal Finance Tracking via Telegram Bot & Make.com</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Email_Draft_&_Client_Data_Automation_for_Real_Estate/">AI-Powered Email Draft & Client Data Automation for Real Estate</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Voiceflow_Chatbot_with_Make_&_Google_Sheets_Integration/">Voiceflow Chatbot with Make.com & Google Sheets Integration</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Classic_Chatbot_with_ManyChat_&_Make_Integration/">Classic Chatbot with ManyChat & Make.com Integration</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Two-Way_Contact_Synchronization_Between_HubSpot_CRM_and_Google_Sheets/">Two-Way Contact Synchronization Between HubSpot CRM and Google Sheets via Make.com</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automating_Contact_Updates_in_Google_Sheets_with_Make/">Automating Contact Updates in Google Sheets with Make</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Data_Synchronization_Between_ActiveCampaign_and_HubSpot_via_Make/">Data Synchronization Between ActiveCampaign and HubSpot via Make</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Contact_Management_in_Google_Sheets_via_Zapier/">Automated Contact Management in Google Sheets via Zapier</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automating_Data_Transfer_from_ClickFunnels_to_Google_Sheets_via_Zapier/">Automating Data Transfer from ClickFunnels to Google Sheets via Zapier</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Integrating_ActiveCampaign_and_HubSpot_with_Make/">Integrating ActiveCampaign and HubSpot with Make.com</a></li>
-                <li><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Webinar_Funnel_in_ActiveCampaign_for_an_Info_Business/">Automated Webinar Funnel in ActiveCampaign for an Info Business</a></li>
-            </ul>
-
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
-            <a href="https://www.upwork.com/freelancers/~01b354c9ce6a8c9bfe?mp_source=share" target="_blank" class="upwork-link">
-                📌 View My Upwork Profile
-            </a>
-        </div>
+    <div class="intro">
+        <p>I design and implement <strong>automation workflows</strong>, <strong>system integrations</strong>, and <strong>AI-assisted processes</strong> for internal operations, marketing, and data management.</p>
+        <p>My work focuses on connecting tools into <strong>coherent systems</strong>, reducing <strong>manual work</strong>, and making processes <strong>predictable and maintainable</strong>.</p>
     </div>
+
+    <div class="block">
+        <h2>🧩 What I Offer</h2>
+        <ul>
+            <li><strong>Workflow automation</strong> using Make.com and Zapier for operational and marketing processes</li>
+            <li><strong>Application integrations</strong> via APIs and webhooks, including data mapping and validation</li>
+            <li><strong>AI-powered automation</strong> using OpenAI for text processing, summarization, and classification</li>
+            <li><strong>CRM setup and optimization</strong> (HubSpot, Airtable, ClickUp, Pipedrive)</li>
+            <li><strong>Email and marketing automation</strong> with event-based logic and conditional flows</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>🔧 Key Tools & Platforms</h2>
+        <ul>
+            <li><strong>Automation platforms:</strong> Make.com (Integromat), Zapier</li>
+            <li><strong>AI:</strong> OpenAI API, ChatGPT, Claude</li>
+            <li><strong>Chatbot & assistant builders:</strong> Voiceflow, ManyChat, ChatBase, CustomGPT, Chipp.ai</li>
+            <li><strong>CRM & internal tools:</strong> HubSpot, Airtable, ClickUp, Pipedrive</li>
+            <li><strong>Marketing automation:</strong> ActiveCampaign, Mailchimp, Klaviyo</li>
+            <li><strong>Data layer:</strong> Google Sheets, Airtable</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>🛠️ What I Build</h2>
+        <ul>
+            <li><strong>AI-assisted content and messaging systems</strong></li>
+            <li><strong>Chatbots and assistants</strong> (Telegram / ManyChat / Voiceflow) with automation backends</li>
+            <li><strong>Lead capture and routing pipelines</strong></li>
+            <li><strong>CRM-centered internal systems</strong> and dashboards</li>
+            <li><strong>Document and email processing workflows</strong></li>
+            <li><strong>Two-way data synchronization systems</strong> with clear ownership rules</li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <h2>⚙️ How I Work</h2>
+        <ul>
+            <li>Start with <strong>process understanding</strong>, not tool selection</li>
+            <li>Define <strong>data ownership</strong> and update rules before building automation</li>
+            <li>Design scenarios with <strong>clear logic</strong>, <strong>error handling</strong>, and <strong>predictable behavior</strong></li>
+            <li>Focus on <strong>maintainability</strong> rather than quick fixes</li>
+            <li>Document workflows when systems are expected to be <strong>reused or extended</strong></li>
+        </ul>
+    </div>
+
+    <h2>🏅 Certifications</h2>
+    <ul>
+        <li><a href="https://www.credly.com/badges/ff59a191-2844-44c8-9e79-ef3849d21925/public_url">Make Advance</a></li>
+        <li><a href="https://www.credly.com/badges/38911216-6ee2-468a-b8a2-aa6587f81623/public_url">Make Intermediate</a></li>
+        <li><a href="https://www.credly.com/badges/f20bdf49-badf-4167-8cba-9c4a4f6b7ea4/public_url">Make Basics</a></li>
+        <li><a href="https://www.credly.com/badges/8b2c1d4e-486b-4cf6-82e0-7de111ed46b1/public_url">Make Foundation</a></li>
+        <li><a href="http://verify.skilljar.com/c/eekaux49zhrq">Airtable Builder</a></li>
+        <li><a href="http://verify.skilljar.com/c/rff4dpmrqnqv">ClickUp Expert</a></li>
+        <li><a href="http://verify.skilljar.com/c/o8xkncn8eu5t">Zapier - Increase productivity using AI</a></li>
+        <li><a href="http://verify.skilljar.com/c/uv6hdm24i3qf">Zapier - Generate blog images using AI</a></li>
+        <li><a href="http://verify.skilljar.com/c/phbqzopdjoot">Zapier - Automate getting new leads into your pipeline</a></li>
+        <li><a href="http://verify.skilljar.com/c/wew4ea7bn3a7">Zapier - Triggering Zaps with Webhooks</a></li>
+        <li><a href="http://verify.skilljar.com/c/y9hhkpttxnbo">Zapier - Filters and Paths by Zapier</a></li>
+        <li><a href="http://verify.skilljar.com/c/rvsbf9r6oj9d">Zapier - Zapier product tour</a></li>
+        <li><a href="http://verify.skilljar.com/c/it8yaq2ht8cg">Zapier - Troubleshooting your Zaps</a></li>
+        <li><a href="http://verify.skilljar.com/c/u8k7uajz59jr">Zapier - Build workflows with Zapier Tables</a></li>
+        <li><a href="http://verify.skilljar.com/c/rm4owrjpgbbu">Zapier - Formatter by Zapier</a></li>
+        <li><a href="http://verify.skilljar.com/c/h4vi4rejxis5">Zapier - Timing your Zaps</a></li>
+        <li><a href="http://verify.skilljar.com/c/pdnax4j2q3jm">Zapier - Customize your Zap</a></li>
+        <li><a href="http://verify.skilljar.com/c/hjthzhmtwmrh">Zapier - Build your first Zap</a></li>
+        <li><a href="http://verify.skilljar.com/c/cffnv35j3xj4">Zapier - Automate your work</a></li>
+        <li><a href="https://app.hubspot.com/academy/achievements/55mvn8rf/en/1/oleh-sviatenkyi/inbound">HubSpot - Inbound</a></li>
+        <li><a href="https://app.hubspot.com/academy/achievements/lnt17zrd/en/1/oleh-sviatenkyi/inbound-sales">HubSpot - Inbound Sales</a></li>
+        <li><a href="https://drive.google.com/file/d/1-VXN6B_-ucFB_6i2og7RsbA0vC3N-Xzk/view?usp=sharing">AI-EXPERT</a></li>
+        <li><a href="https://drive.google.com/file/d/1bfzA-4X6uNh0LKkcfATRTmYT1K_p0d1M/view?usp=sharing">MARKETING AUTOMATION</a></li>
+    </ul>
+
+    <h2>🚀 Projects</h2>
+
+<div class="projects-group-title">AI Systems & Chatbots</div>
+<ul class="project-list">
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Telegram_Content_Automation_with_Airtable_Make_&_OpenAI/">AI-Powered Telegram Content Automation with Airtable, Make & OpenAI</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Multi-Channel_Content_Generation_&_Auto-Publishing_System/">AI-Powered Multi-Channel Content Generation & Auto-Publishing System</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/ManyChat_Make_OpenAI_&_Airtable_System_for_Psychology_Marathon/">ManyChat, Make, OpenAI & Airtable System for Psychology Marathon</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Meeting_Notes_Follow-Up_&_CRM_Integration/">AI-Powered Meeting Notes, Follow-Up & CRM Integration</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Telegram_Chatbot_with_OpenAI_Assistant_&_Make_Integration/">Telegram Chatbot with OpenAI Assistant & Make.com Integration</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Personal_Finance_Tracking_via_Telegram_Bot_&_Make/">AI-Powered Personal Finance Tracking via Telegram Bot & Make.com</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/AI-Powered_Email_Draft_&_Client_Data_Automation_for_Real_Estate/">AI-Powered Email Draft & Client Data Automation for Real Estate</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Voiceflow_Chatbot_with_Make_&_Google_Sheets_Integration/">Voiceflow Chatbot with Make.com & Google Sheets Integration</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Classic_Chatbot_with_ManyChat_&_Make_Integration/">Classic Chatbot with ManyChat & Make.com Integration</a></li>
+</ul>
+
+<div class="projects-group-title">CRM & Internal Systems</div>
+<ul class="project-list">
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Airtable_CRM_with_Executive_Dashboard_&_Team_Workflows/">Airtable CRM with Executive Dashboard & Team Workflows</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/CRM_Setup_for_Apartment_Booking_Service_in_Airtable/">CRM Setup for Apartment Booking Service in Airtable</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Recruiting_CRM_in_ClickUp_with_Google_Sheets_Integration/">Automated Recruiting CRM in ClickUp with Google Sheets Integration</a></li>
+</ul>
+
+<div class="projects-group-title">Integrations & Data Synchronization</div>
+<ul class="project-list">
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Recipe_Data_Extraction_and_Structuring_with_Make_and_OpenAI/">Automated Recipe Data Extraction and Structuring with Make and OpenAI</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Two-Way_Contact_Synchronization_Between_HubSpot_CRM_and_Google_Sheets/">Two-Way Contact Synchronization Between HubSpot CRM and Google Sheets via Make.com</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automating_Contact_Updates_in_Google_Sheets_with_Make/">Automating Contact Updates in Google Sheets with Make</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Data_Synchronization_Between_ActiveCampaign_and_HubSpot_via_Make/">Data Synchronization Between ActiveCampaign and HubSpot via Make</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Contact_Management_in_Google_Sheets_via_Zapier/">Automated Contact Management in Google Sheets via Zapier</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automating_Data_Transfer_from_ClickFunnels_to_Google_Sheets_via_Zapier/">Automating Data Transfer from ClickFunnels to Google Sheets via Zapier</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Integrating_ActiveCampaign_and_HubSpot_with_Make/">Integrating ActiveCampaign and HubSpot with Make.com</a></li>
+    <li class="project-item"><a href="https://olegsviatenkyi.github.io/Portfolio/Automated_Webinar_Funnel_in_ActiveCampaign_for_an_Info_Business/">Automated Webinar Funnel in ActiveCampaign for an Info Business</a></li>
+</ul>
+
+
+    <div class="footer">
+        <a href="https://www.upwork.com/freelancers/~01b354c9ce6a8c9bfe?mp_source=share" target="_blank" class="upwork-link">
+            📌 View My Upwork Profile
+        </a>
+    </div>
+
+</div>
 </body>
 </html>
