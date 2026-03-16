@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HubSpot CRM Automation System with Google Sheets Integration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #14a800;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1.2rem auto 2rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .role-line {
+      margin-bottom: 1.5rem;
+    }
+
+    .screenshots-list {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .screenshots-list li {
+      margin-bottom: 2rem;
+    }
+
+    .screenshots-list strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>HubSpot CRM Automation System with Google Sheets Integration</h1>
+
+    <p class="role-line"><strong>👤 Role:</strong> HubSpot CRM & Make.com Automation Specialist</p>
+
+    <h2>🔍 Project Overview</h2>
+    <p>
+      This project focused on building a structured automation system between Google Sheets and HubSpot CRM using Make.com.
+      The goal was to automate the creation, updating, and synchronization of Contacts, Companies, and Deals while reducing manual CRM work and improving data consistency.
+    </p>
+    <p>
+      The solution included upsert logic, validation rules, association workflows, centralized logging, and a separate update scenario for changes coming from Google Sheets.
+    </p>
+
+    <h2>🎯 Business Challenge</h2>
+    <p>
+      The business needed a more reliable way to manage CRM data stored in Google Sheets and keep HubSpot records accurate and structured.
+    </p>
+    <ul>
+      <li>Manual creation and updating of Contacts, Companies, and Deals</li>
+      <li>Risk of duplicate or incomplete records</li>
+      <li>Missing associations between Deals, Contacts, and Companies</li>
+      <li>No clear visibility into automation results and failures</li>
+      <li>Need to handle invalid or missing data without breaking scenarios</li>
+      <li>Need for centralized logging for support and troubleshooting</li>
+    </ul>
+    <p>
+      The system had to support a scalable workflow where spreadsheet-driven operations could update HubSpot consistently and safely.
+    </p>
+
+    <h2>🛠️ Solution</h2>
+    <p>
+      I designed and implemented a Make.com automation system connecting Google Sheets with HubSpot CRM through structured scenario logic.
+    </p>
+    <p>
+      The solution includes:
+    </p>
+    <ul>
+      <li>Contacts upsert flow with search by email</li>
+      <li>Companies upsert flow with search by domain</li>
+      <li>Deals upsert flow with search by external ID</li>
+      <li>Router-based branching for create vs update logic</li>
+      <li>Automatic deal associations to Contact and Company</li>
+      <li>Validation checks before record processing</li>
+      <li>Centralized logging of success and error events into Google Sheets</li>
+      <li>Separate scenario for form submission logging</li>
+      <li>Separate scenario for handling updates triggered by Sheet changes</li>
+    </ul>
+
+    <h2>🗂 Automation Structure</h2>
+
+    <p>
+      <strong>Contacts Upsert</strong><br>
+      A dedicated scenario processes new rows from Google Sheets and searches HubSpot Contacts by email.
+      If the contact already exists, the record is updated. If no match is found, a new contact is created.
+    </p>
+
+    <p>
+      <strong>Companies Upsert</strong><br>
+      A separate scenario handles Companies using domain as the main lookup key.
+      This flow updates existing companies when a match is found and creates new ones when needed.
+    </p>
+
+    <p>
+      <strong>Deals Upsert</strong><br>
+      Deals are processed with external ID as the primary reference.
+      This allows the system to identify existing deals, update them correctly, or create new ones without relying on unstable manual matching.
+    </p>
+
+    <h2>🔗 Association Logic</h2>
+    <p>
+      A dedicated part of the automation handles relationships between CRM objects.
+    </p>
+    <ul>
+      <li>Automatic association of Deals with Contacts</li>
+      <li>Automatic association of Deals with Companies</li>
+    </ul>
+    <p>
+      This helps preserve CRM structure and ensures deals remain connected to the correct people and businesses.
+    </p>
+
+    <h2>⚙️ Routing & Fallback Logic</h2>
+    <p>
+      Routers were used to split scenario execution into controlled branches depending on record state and validation results.
+    </p>
+    <ul>
+      <li>Update route when an existing record is found</li>
+      <li>Create route when no match exists</li>
+      <li>Fallback handling for missing Contact</li>
+      <li>Fallback handling for missing Company</li>
+      <li>Default deal stage handling when needed</li>
+    </ul>
+    <p>
+      This approach improves reliability and keeps scenarios readable and maintainable.
+    </p>
+
+    <h2>✅ Data Validation & Error Handling</h2>
+    <p>
+      Validation was added before key actions to prevent incorrect data from entering the CRM.
+    </p>
+    <ul>
+      <li>Email validation</li>
+      <li>Domain validation</li>
+      <li>Required field validation for Deals</li>
+    </ul>
+    <p>
+      Error handling routes were also implemented so the scenarios do not stop when a record fails.
+      Instead of breaking the full flow, issues are redirected into the logging layer for review.
+    </p>
+
+    <h2>🔁 Retry Stability</h2>
+    <p>
+      Retry-oriented logic was implemented to improve resilience in case of temporary HubSpot API issues.
+      This helped reduce scenario interruptions and made the automation more stable during repeated operations.
+    </p>
+
+    <h2>📋 Logging System</h2>
+    <p>
+      A centralized logging system was built in Google Sheets to track automation activity.
+    </p>
+    <ul>
+      <li>Timestamp</li>
+      <li>Scenario name</li>
+      <li>Record key</li>
+      <li>Action</li>
+      <li>Status</li>
+      <li>Error message</li>
+    </ul>
+    <p>
+      This makes it easier to monitor performance, review failures, and troubleshoot record-level issues.
+    </p>
+
+    <h2>🔄 Sheets-to-HubSpot Update Logic</h2>
+    <p>
+      In addition to new row processing, a separate scenario was built to handle updates triggered by changes inside Google Sheets.
+      This allows operational edits made in Sheets to be pushed back into HubSpot through a controlled update path.
+    </p>
+
+    <h2>📝 HubSpot Form Submission Logging</h2>
+    <p>
+      A dedicated scenario was added to capture HubSpot form submissions and log them into Google Sheets.
+      This provided an additional tracking layer for incoming submissions and improved operational visibility.
+    </p>
+
+    <h2>📦 Final Setup</h2>
+    <ul>
+      <li>Automated Contacts sync from Google Sheets to HubSpot</li>
+      <li>Automated Companies sync from Google Sheets to HubSpot</li>
+      <li>Automated Deals sync from Google Sheets to HubSpot</li>
+      <li>Deal association logic for Contact and Company linking</li>
+      <li>Validation and fallback handling</li>
+      <li>Centralized Google Sheets logging system</li>
+      <li>Separate HubSpot form submission logging flow</li>
+      <li>Separate Sheets changes to HubSpot update scenario</li>
+      <li>Structured scenario naming for maintainability</li>
+    </ul>
+
+    <h2>🧠 Skills & Tools</h2>
+    <ul>
+      <li>HubSpot CRM</li>
+      <li>Make.com</li>
+      <li>Google Sheets</li>
+      <li>CRM Automation</li>
+      <li>API Integration</li>
+      <li>Data Validation</li>
+      <li>Error Handling</li>
+      <li>Workflow Design</li>
+      <li>Sales Operations Automation</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+    <ul class="screenshots-list">
+      <li>
+        <strong>Contacts Upsert Scenario</strong>
+        <p>
+          Google Sheets to HubSpot contact sync with email-based lookup and create/update routing.
+        </p>
+        <img src="Contacts_Upsert_–_New_Rows.jpg" alt="Contacts Upsert Scenario" class="project-image">
+      </li>
+
+      <li>
+        <strong>Companies Upsert Scenario</strong>
+        <p>
+          Company synchronization flow using domain matching and controlled upsert logic.
+        </p>
+        <img src="Companies_Upsert_–_New_Rows.jpg" alt="Companies Upsert Scenario" class="project-image">
+      </li>
+
+      <li>
+        <strong>Deals Upsert Scenario</strong>
+        <p>
+          Deal processing scenario with branching, fallback logic, and object associations.
+        </p>
+        <img src="Deals_Upsert_–_New_Rows.jpg" alt="Deals Upsert Scenario" class="project-image">
+      </li>
+
+      <li>
+        <strong>Sheets Changes Router – HubSpot Updates</strong>
+        <p>
+          Separate scenario for pushing spreadsheet changes back into HubSpot.
+        </p>
+        <img src="Sheets_Changes_Router_–_HubSpot_Updates.jpg" alt="Sheets Changes Router – HubSpot Updates" class="project-image">
+      </li>
+
+      <li>
+        <strong>HubSpot Form Submissions – Google Sheets Logging</strong>
+        <p>
+          Form submission tracking flow that logs incoming HubSpot form data into Google Sheets.
+        </p>
+        <img src="HubSpot_Form_Submissions_–_Google_Sheets_Logging.jpg" alt="HubSpot Form Submissions – Google Sheets Logging" class="project-image">
+      </li>
+
+      <li>
+        <strong>Deals Pipeline in HubSpot</strong>
+        <p>
+          Pipeline view showing structured deal stages after automated creation and updates.
+        </p>
+        <img src="Deals-Hubspot.jpg" alt="Deals Pipeline in HubSpot" class="project-image">
+      </li>
+
+      <li>
+        <strong>Deals Source Sheet</strong>
+        <p>
+          Spreadsheet structure used to manage and sync deal records into HubSpot.
+        </p>
+        <img src="Deals-Sheet.jpg" alt="Deals Source Sheet" class="project-image">
+      </li>
+
+      <li>
+        <strong>Companies Source Sheet</strong>
+        <p>
+          Spreadsheet source for company records with standardized business data fields.
+        </p>
+        <img src="Companies-Sheet.jpg" alt="Companies Source Sheet" class="project-image">
+      </li>
+
+      <li>
+        <strong>Central Logging Sheet</strong>
+        <p>
+          Scenario-level logging for status tracking, error visibility, and troubleshooting.
+        </p>
+        <img src="Make_Logs.jpg" alt="Central Logging Sheet" class="project-image">
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
