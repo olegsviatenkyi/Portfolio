@@ -71,21 +71,21 @@
     }
 
     .topbar-inner{
-      max-width: var(--maxw);
+      max-width: 1200px;
       margin: 0 auto;
       padding: .75rem 1rem;
       display: flex;
-      gap: .6rem;
+      gap: 1.2rem;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: nowrap;
     }
 
     .brand{
       display: flex;
       flex-direction: column;
       gap: .2rem;
-      min-width: 240px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
 
     .brand-title{
@@ -111,7 +111,9 @@
       display: flex;
       gap: .6rem;
       align-items: center;
+      justify-content: flex-end;
       flex-wrap: nowrap;
+      flex: 0 0 auto;
     }
 
     .btn{
@@ -127,6 +129,7 @@
       font-weight: 600;
       font-size: .92rem;
       text-decoration: none;
+      white-space: nowrap;
       transition: transform .08s ease, background .2s ease, border-color .2s ease;
       user-select: none;
     }
@@ -325,13 +328,48 @@
       .card{ grid-column: span 12; }
     }
 
+    @media (max-width: 1050px){
+      .topbar-inner{
+        flex-wrap: wrap;
+      }
+
+      .brand{
+        width: 100%;
+        flex-basis: 100%;
+      }
+
+      .nav{
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
     @media (max-width: 768px){
-      h1{ font-size: 1.55rem; }
-      .brand{ min-width: 180px; }
-      .btn{ width: 100%; }
-      .nav{ width: 100%; }
-      .topbar-inner{ gap: .7rem; }
-      .hero{ padding: 1.3rem 1rem; }
+      h1{
+        font-size: 1.55rem;
+      }
+
+      .topbar-inner{
+        gap: .7rem;
+      }
+
+      .brand{
+        width: 100%;
+      }
+
+      .nav{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn{
+        width: 100%;
+      }
+
+      .hero{
+        padding: 1.3rem 1rem;
+      }
     }
   
 
