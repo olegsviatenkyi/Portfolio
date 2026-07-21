@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airtable and Make Automation System for Event Readiness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #14a800;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1.2rem auto 2rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .role-line {
+      margin-bottom: 1.5rem;
+    }
+
+    .screenshots-list {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .screenshots-list li {
+      margin-bottom: 2rem;
+    }
+
+    .screenshots-list strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Airtable and Make Automation System for Event Readiness</h1>
+
+    <p class="role-line"><strong>👤 Role:</strong> Airtable & Make Automation Specialist</p>
+
+    <h2>🔍 Project Overview</h2>
+    <p>
+      This project focused on building a new event readiness system using Airtable, Make, JotForm and Postmark.
+      The system was created to manage participant records, teams, compliance forms, onboarding emails and event readiness in one central workflow.
+    </p>
+    <p>
+      The main goal was to replace manual tracking and disconnected tools with a more reliable system that could support multiple rally events at the same time.
+    </p>
+
+    <h2>🎯 Business Challenge</h2>
+    <p>
+      The existing process depended on several manual checks and older automations. This made it difficult to track which participants had completed their required steps before the event.
+    </p>
+    <ul>
+      <li>Participant data was spread across different systems</li>
+      <li>Teams, skippers, crew and under 18 participants needed clear matching logic</li>
+      <li>Compliance forms had to update the correct Airtable records</li>
+      <li>Different forms were required for adults, under 18 participants and skippers</li>
+      <li>Email reminders had to be sent at the right time for each participant type</li>
+      <li>The team needed clear views for missing, submitted and flagged records</li>
+      <li>Old and new event flows had to be separated to avoid confusion</li>
+    </ul>
+
+    <h2>🛠️ Solution</h2>
+    <p>
+      I built a new Airtable-based readiness system and connected it with Make automations for bookings, forms, emails and compliance tracking.
+    </p>
+    <p>The solution included:</p>
+    <ul>
+      <li>Creating a structured Airtable base for events, participants, teams and compliance</li>
+      <li>Building Make automations to process new ticket purchases</li>
+      <li>Creating participant records from Ticket Tailor bookings</li>
+      <li>Automatically linking skippers, crew and under 18 participants to teams</li>
+      <li>Creating compliance records for each participant</li>
+      <li>Connecting JotForm submissions to Airtable compliance status fields</li>
+      <li>Sending onboarding and readiness emails through Postmark</li>
+      <li>Adding reminder logic for missing forms and incomplete steps</li>
+      <li>Creating Airtable views for daily review and issue tracking</li>
+    </ul>
+
+    <h2>⚙️ Automation Structure</h2>
+    <p>
+      <strong>Ticket Purchase</strong><br>
+      The workflow starts when a participant buys a ticket. Make receives the booking data and checks the ticket status, event code and participant role.
+    </p>
+    <p>
+      <strong>Participant Creation</strong><br>
+      The system creates or updates the participant record in Airtable and assigns the correct role, event, ticket code and related details.
+    </p>
+    <p>
+      <strong>Team Matching</strong><br>
+      Skippers are used to create teams, while crew and under 18 participants are linked to the correct skipper or guardian where possible.
+    </p>
+    <p>
+      <strong>Compliance Tracking</strong><br>
+      A related compliance record is created for each participant. This record tracks waivers, medical forms, team details, insurance and induction status.
+    </p>
+    <p>
+      <strong>Email Automation</strong><br>
+      Postmark emails are sent based on participant status and event timing. Each email contains the correct form link with the participant ticket code.
+    </p>
+
+    <h2>🔑 Ticket Code Matching</h2>
+    <p>
+      Ticket code matching was used as the main way to connect form submissions with the correct Airtable records.
+    </p>
+    <p>
+      This made the process more reliable than email matching, especially when multiple participants used the same email address or when under 18 participants were managed by a guardian.
+    </p>
+
+    <h2>📋 Airtable Tracking Views</h2>
+    <p>
+      Dedicated Airtable views were created to help the event team review the system quickly and focus on records that need attention.
+    </p>
+    <ul>
+      <li>Participants by event</li>
+      <li>Skippers, crew and under 18 participants</li>
+      <li>Teams by rally</li>
+      <li>Incomplete compliance records</li>
+      <li>Flagged compliance records</li>
+      <li>Missing waiver, medical, insurance and induction records</li>
+      <li>Communication log by event</li>
+    </ul>
+    <p>
+      These views make it easier to manage multiple events without mixing participant, team and compliance data.
+    </p>
+
+    <h2>📨 Email & Reminder Flow</h2>
+    <p>
+      The system uses Postmark templates for onboarding and readiness emails.
+      Emails are triggered based on ticket purchase, participant role and event timeline.
+    </p>
+    <ul>
+      <li>Welcome and resources emails after ticket purchase</li>
+      <li>Waiver form emails for adults and under 18 participants</li>
+      <li>Medical questionnaire emails</li>
+      <li>Team and boat details emails for skippers</li>
+      <li>Insurance and licence upload emails</li>
+      <li>Induction emails before the rally</li>
+      <li>Reminder emails for incomplete steps</li>
+    </ul>
+
+    <h2>🔎 System Diagnostics</h2>
+    <p>
+      I also reviewed and tested several edge cases during the launch process to make sure the new system worked correctly.
+    </p>
+    <ul>
+      <li>Checked participant records that were created in the old system but not in the new system</li>
+      <li>Reviewed compliance records without linked participants</li>
+      <li>Identified old Sender emails that were still being sent for some participants</li>
+      <li>Checked Make scenario history and Airtable logs</li>
+      <li>Verified that TR11, TR12 and TR13 records were being handled by the new system</li>
+      <li>Separated old event flow issues from the new launch flow</li>
+    </ul>
+
+    <h2>✅ Result</h2>
+    <ul>
+      <li>Central Airtable system for event readiness management</li>
+      <li>Automatic participant and team creation from ticket purchases</li>
+      <li>Reliable ticket code matching for forms and compliance records</li>
+      <li>Clear tracking of waiver, medical, team details, insurance and induction status</li>
+      <li>Automated onboarding and reminder emails through Postmark</li>
+      <li>Better visibility of missing and flagged records</li>
+      <li>Improved separation between old and new event workflows</li>
+    </ul>
+
+    <h2>📦 Final Setup</h2>
+    <ul>
+      <li>Airtable base for events, participants, teams and compliance</li>
+      <li>Make booking automation from Ticket Tailor to Airtable</li>
+      <li>JotForm to Airtable compliance workflows</li>
+      <li>Postmark email templates for participant onboarding</li>
+      <li>Reminder scan automations for incomplete readiness steps</li>
+      <li>Communication log for sent emails</li>
+      <li>Error and issue tracking structure</li>
+      <li>Event-specific views for TR11, TR12 and TR13</li>
+    </ul>
+
+    <h2>🧠 Skills & Tools</h2>
+    <ul>
+      <li>Airtable</li>
+      <li>Make.com</li>
+      <li>Ticket Tailor</li>
+      <li>JotForm</li>
+      <li>Postmark</li>
+      <li>Workflow Automation</li>
+      <li>Data Matching</li>
+      <li>Conditional Routing</li>
+      <li>Email Automation</li>
+      <li>Automation Troubleshooting</li>
+      <li>Event Operations</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+    <ul class="screenshots-list">
+      <li>
+        <strong>Event Setup in Airtable</strong>
+        <p>
+          Event setup table with dates, capacity, status, timeline phase, and event-specific links.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/1_Events.jpg" alt="Event Setup in Airtable" class="project-image">
+      </li>
+
+      <li>
+        <strong>Participant Management</strong>
+        <p>
+          Participant structure for tracking ticket codes, roles, teams, events, and readiness status.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/2_Participants.jpg" alt="Participant Management" class="project-image">
+      </li>
+
+      <li>
+        <strong>Team Management</strong>
+        <p>
+          Team management table for linking skippers, crew, boat details, and rally readiness.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/3_Teams.jpg" alt="Team Management" class="project-image">
+      </li>
+
+      <li>
+        <strong>Compliance Tracking</strong>
+        <p>
+          Compliance tracking table for waivers, medical forms, team details, insurance, and induction.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/4_Compliance.jpg" alt="Compliance Tracking" class="project-image">
+      </li>
+
+      <li>
+        <strong>Booking - Ticket Tailor LIVE</strong>
+        <p>
+          Booking automation that creates participants, teams, and compliance records from ticket purchases.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/5_Booking-Ticket_Tailor_LIVE.jpg" alt="Booking - Ticket Tailor LIVE" class="project-image">
+      </li>
+
+      <li>
+        <strong>JotForm Medical to Compliance</strong>
+        <p>
+          Medical form workflow that updates compliance status and flags records that need attention.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/6_PROD-JotForm_Medical_to_Compliance.jpg" alt="JotForm Medical to Compliance" class="project-image">
+      </li>
+
+      <li>
+        <strong>Reminder Scan - Email 7</strong>
+        <p>
+          Reminder automation that checks induction status and sends the correct follow-up emails.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_and_Make_Automation_System_for_Event_Readiness/7_PROD-Reminder_Scan-Email_7-Induction.jpg" alt="Reminder Scan - Email 7" class="project-image">
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
