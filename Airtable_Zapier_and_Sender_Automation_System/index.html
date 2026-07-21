@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airtable, Zapier and Sender Automation System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .back-link {
+      display: block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      color: #14a800;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .project-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1.2rem auto 2rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .role-line {
+      margin-bottom: 1.5rem;
+    }
+
+    .screenshots-list {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .screenshots-list li {
+      margin-bottom: 2rem;
+    }
+
+    .screenshots-list strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p, li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+
+    <h1>Airtable, Zapier and Sender Automation System</h1>
+
+    <p class="role-line"><strong>👤 Role:</strong> Airtable & Zapier Automation Specialist</p>
+
+    <img src="cover.png" alt="Airtable, Zapier and Sender Automation System" class="project-image">
+
+    <h2>🔍 Project Overview</h2>
+    <p>
+      This project focused on improving an existing event management system built with Airtable, Zapier, JotForm and Sender.
+      The system handled more than 180 participants across several events, but many processes were difficult to manage and depended on manual checks.
+    </p>
+    <p>
+      The main goal was to make medical form tracking more accurate, reduce manual work, and give the event team a clear view of submitted, missing and flagged forms.
+    </p>
+
+    <h2>🎯 Business Challenge</h2>
+    <p>
+      The existing setup was working, but the logic was difficult to maintain and participant matching was not always reliable.
+    </p>
+    <ul>
+      <li>Several participants could share the same email address</li>
+      <li>Old form submissions did not contain a unique ticket code</li>
+      <li>Duplicate records existed in Airtable and JotForm</li>
+      <li>Standard and risky medical responses had to be separated</li>
+      <li>The team needed clear views for missing and flagged forms</li>
+      <li>Sender and Airtable synchronization issues were difficult to diagnose</li>
+    </ul>
+
+    <h2>🛠️ Solution</h2>
+    <p>
+      I improved the existing workflow by introducing ticket code matching and building a dedicated JotForm to Airtable automation in Zapier.
+    </p>
+    <p>The solution included:</p>
+    <ul>
+      <li>Adding a ticket code field to the medical JotForm</li>
+      <li>Passing the unique ticket code through personalized form links</li>
+      <li>Updating the Sender email template to keep the ticket code in the URL</li>
+      <li>Building a Zap that finds the correct Airtable record by ticket code</li>
+      <li>Separating submissions into Submitted and Flagged paths</li>
+      <li>Updating medical status and submission date automatically</li>
+      <li>Creating dedicated Airtable views for tracking and review</li>
+      <li>Processing historical submissions and documenting exceptions</li>
+    </ul>
+
+    <h2>⚙️ Automation Structure</h2>
+    <p>
+      <strong>JotForm Submission</strong><br>
+      The workflow starts when a participant submits the medical questionnaire.
+    </p>
+    <p>
+      <strong>Participant Matching</strong><br>
+      Zapier searches Airtable using the unique ticket code instead of email.
+      This improves accuracy when several participants use the same email address.
+    </p>
+    <p>
+      <strong>Response Routing</strong><br>
+      The Zap checks the medical answers and sends each submission through one of two controlled paths:
+    </p>
+    <ul>
+      <li><strong>Submitted:</strong> no response requires manual review</li>
+      <li><strong>Flagged:</strong> one or more answers require attention</li>
+    </ul>
+    <p>
+      <strong>Airtable Update</strong><br>
+      The correct participant record is updated with the medical form status and submission date.
+    </p>
+
+    <h2>🔑 Ticket Code Matching</h2>
+    <p>
+      Email matching was replaced with ticket code matching for the medical form workflow.
+      Each participant receives a personalized form link containing their unique ticket code.
+    </p>
+    <p>
+      This made the process more reliable and reduced the risk of updating the wrong participant record.
+    </p>
+
+    <h2>📋 Airtable Tracking Views</h2>
+    <p>
+      Dedicated Airtable views were created to make daily work easier for the event team.
+    </p>
+    <ul>
+      <li>Medical Form Tracking</li>
+      <li>Medical Forms Not Started</li>
+      <li>Flagged Medical Submissions</li>
+    </ul>
+    <p>
+      These views allow the team to focus on exceptions instead of checking every participant manually.
+    </p>
+
+    <h2>🗂 Historical Data Cleanup</h2>
+    <p>
+      Older JotForm submissions did not include ticket codes, so they had to be reviewed and matched with Airtable records.
+    </p>
+    <ul>
+      <li>Existing submissions were matched with participant records</li>
+      <li>Medical status and submission dates were updated</li>
+      <li>Duplicate and missing records were documented</li>
+      <li>Unclear cases were separated for manual review</li>
+    </ul>
+
+    <h2>🔎 System Diagnostics</h2>
+    <p>
+      I also reviewed several existing automations and synchronization issues in the old system.
+    </p>
+    <ul>
+      <li>Verified the Adult Waiver Reminder logic</li>
+      <li>Located a Sender synchronization failure inside the Zapier action</li>
+      <li>Confirmed how changed email addresses were handled in Sender</li>
+      <li>Investigated missing team and insurance links</li>
+      <li>Identified weak skipper and crew matching logic</li>
+    </ul>
+
+    <h2>✅ Result</h2>
+    <ul>
+      <li>More accurate participant matching</li>
+      <li>Automatic medical form status updates</li>
+      <li>Clear separation of standard and flagged submissions</li>
+      <li>Less manual checking before each event</li>
+      <li>Better visibility of missing forms and problem cases</li>
+      <li>A clearer list of weak points for future system improvements</li>
+    </ul>
+
+    <h2>📦 Final Setup</h2>
+    <ul>
+      <li>Updated JotForm medical questionnaire</li>
+      <li>Personalized Sender form links with ticket code</li>
+      <li>Published JotForm to Airtable Zap</li>
+      <li>Submitted and Flagged routing logic</li>
+      <li>Automated Airtable status updates</li>
+      <li>Dedicated medical tracking views</li>
+      <li>Historical submission cleanup</li>
+      <li>System issue documentation</li>
+    </ul>
+
+    <h2>🧠 Skills & Tools</h2>
+    <ul>
+      <li>Airtable</li>
+      <li>Zapier</li>
+      <li>JotForm</li>
+      <li>Sender</li>
+      <li>Workflow Automation</li>
+      <li>Data Matching</li>
+      <li>Conditional Routing</li>
+      <li>Data Cleanup</li>
+      <li>Automation Troubleshooting</li>
+      <li>Event Operations</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+    <ul class="screenshots-list">
+      <li>
+        <strong>Medical Form Tracking in Airtable</strong>
+        <p>
+          A central view shows form status, submission dates and participant matching by unique ticket code.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_Zapier_and_Sender_Automation_System/1_TR07_Medical_Form_Tracking.jpg" alt="Medical Form Tracking in Airtable" class="project-image">
+      </li>
+
+      <li>
+        <strong>Flagged Medical Submissions</strong>
+        <p>
+          A filtered Airtable view helps the event team quickly find medical responses that require manual review.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_Zapier_and_Sender_Automation_System/2_TR07_ Medical_Flagged.jpg" alt="Flagged Medical Submissions" class="project-image">
+      </li>
+
+      <li>
+        <strong>Automated JotForm to Airtable Workflow</strong>
+        <p>
+          The Zap checks submissions, separates standard and flagged responses, and updates the correct Airtable record.
+        </p>
+        <img src="https://olegsviatenkyi.github.io/Portfolio/Airtable_Zapier_and_Sender_Automation_System/3_Medical_Form_Completed.jpg" alt="Automated JotForm to Airtable Workflow" class="project-image">
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
