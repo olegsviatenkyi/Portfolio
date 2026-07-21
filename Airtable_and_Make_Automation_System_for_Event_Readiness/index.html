@@ -132,21 +132,21 @@
       The system was created to manage participant records, teams, compliance forms, onboarding emails and event readiness in one central workflow.
     </p>
     <p>
-      The main goal was to replace manual tracking and disconnected tools with a more reliable system that could support multiple rally events at the same time.
+      The main goal was to reduce manual tracking and create a reliable system that could support multiple rally events at the same time.
     </p>
 
     <h2>🎯 Business Challenge</h2>
     <p>
-      The existing process depended on several manual checks and older automations. This made it difficult to track which participants had completed their required steps before the event.
+      The event team needed a clear and reliable way to manage participants, teams and required readiness steps before each rally.
     </p>
     <ul>
-      <li>Participant data was spread across different systems</li>
-      <li>Teams, skippers, crew and under 18 participants needed clear matching logic</li>
+      <li>Participant and team data had to be managed in one central place</li>
+      <li>Skippers, crew and under 18 participants needed clear matching logic</li>
       <li>Compliance forms had to update the correct Airtable records</li>
       <li>Different forms were required for adults, under 18 participants and skippers</li>
       <li>Email reminders had to be sent at the right time for each participant type</li>
       <li>The team needed clear views for missing, submitted and flagged records</li>
-      <li>Old and new event flows had to be separated to avoid confusion</li>
+      <li>The system had to support several rally events without mixing records</li>
     </ul>
 
     <h2>🛠️ Solution</h2>
@@ -228,17 +228,18 @@
       <li>Reminder emails for incomplete steps</li>
     </ul>
 
-    <h2>🔎 System Diagnostics</h2>
+    <h2>🔎 Testing & Launch Review</h2>
     <p>
-      I also reviewed and tested several edge cases during the launch process to make sure the new system worked correctly.
+      Before launch, I tested the main workflows to make sure the system correctly processed bookings, created participant records, updated compliance statuses and sent the right emails.
     </p>
     <ul>
-      <li>Checked participant records that were created in the old system but not in the new system</li>
-      <li>Reviewed compliance records without linked participants</li>
-      <li>Identified old Sender emails that were still being sent for some participants</li>
-      <li>Checked Make scenario history and Airtable logs</li>
-      <li>Verified that TR11, TR12 and TR13 records were being handled by the new system</li>
-      <li>Separated old event flow issues from the new launch flow</li>
+      <li>Tested booking automation from Ticket Tailor to Airtable</li>
+      <li>Verified participant creation for skippers, crew and under 18 participants</li>
+      <li>Checked team matching and participant linking logic</li>
+      <li>Tested JotForm submissions and compliance status updates</li>
+      <li>Verified Postmark email templates and dynamic form links</li>
+      <li>Checked reminder scenarios for missing readiness steps</li>
+      <li>Reviewed Airtable views for participant, team and compliance tracking</li>
     </ul>
 
     <h2>✅ Result</h2>
@@ -249,7 +250,7 @@
       <li>Clear tracking of waiver, medical, team details, insurance and induction status</li>
       <li>Automated onboarding and reminder emails through Postmark</li>
       <li>Better visibility of missing and flagged records</li>
-      <li>Improved separation between old and new event workflows</li>
+      <li>Clear structure for managing multiple event launches</li>
     </ul>
 
     <h2>📦 Final Setup</h2>
